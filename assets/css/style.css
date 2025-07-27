@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background: #1c272e url("/assets/img/background.png") no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+
+.left-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.left-buttons a {
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease;
+  text-decoration: none;
+}
+
+.left-buttons a:hover {
+  background: white;
+}
+.left-buttons a:hover svg path {
+  fill: black;
+}
+
+.left-buttons svg {
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+.left-buttons svg path {
+  transition: fill 0.1s ease;
+}
+
+.date-time {
+  position: absolute;
+  top: 20px;
+  right: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: max-content;
+  user-select: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  gap: 12px;
+}
+
+.clock-wrapper,
+.date-wrapper,
+.text-wrapper {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.text-wrapper {
+  max-width: 295.547px;
+}
+
+.clock {
+  font-size: 64px;
+  font-weight: bold;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.date,
+.text {
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.85;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#date-day,
+#period{
+  font-size: 14px;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.7;
+}
+
+#text-content {
+  font-size: 14px;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.7;
+}
+
+#period {
+  font-weight: 600;
+}
+
+/* LIGHTMODE */
+body.light-mode {
+  background: #eaeef3 url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+}
+
+body.light-mode .left-buttons button {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .left-buttons button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body.light-mode .left-buttons button:hover svg path {
+  fill: white;
+}
+
+body.light-mode .left-buttons button svg path {
+  fill: black;
+}
+
+body.light-mode .date-time {
+  color: black;
+}
+
+body.light-mode .clock-wrapper,
+body.light-mode .date-wrapper,
+body.light-mode .text-wrapper {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .clock,
+body.light-mode .date,
+body.light-mode #date-day,
+body.light-mode #period,
+body.light-mode .text, 
+body.light-mode #text-content {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
